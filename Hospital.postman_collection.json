@@ -1,0 +1,145 @@
+{
+	"info": {
+		"_postman_id": "3646abc7-0534-43ae-b4db-016ae0ae133f",
+		"name": "Hospital",
+		"schema": "https://schema.getpostman.com/json/collection/v2.0.0/collection.json",
+		"_exporter_id": "24639029"
+	},
+	"item": [
+		{
+			"name": "create",
+			"request": {
+				"method": "POST",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n  \"name\": {\r\n    \"use\": \"official\",\r\n    \"family\": \"Медведь\",\r\n    \"given\": [\r\n      \"Александр\",\r\n      \"Валерьевич\"\r\n    ]\r\n  },\r\n  \"gender\": \"male\",\r\n  \"birthDate\": \"1991-04-28T17:39:05.666Z\",\r\n  \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7000/api/patient/create"
+			},
+			"response": []
+		},
+		{
+			"name": "update",
+			"request": {
+				"method": "PUT",
+				"header": [],
+				"body": {
+					"mode": "raw",
+					"raw": "{\r\n    \"name\": {\r\n        \"id\": \"c6c9203c-49cd-4777-e406-08dd245b1f40\",\r\n        \"use\": \"official\",\r\n        \"family\": \"Влащик\",\r\n        \"given\": [\r\n            \"Валерия\",\r\n            \"Анатольевна\"\r\n        ]\r\n    },\r\n    \"gender\": \"female\",\r\n    \"birthDate\": \"1994-12-05T17:39:05.666Z\",\r\n    \"active\": true\r\n}",
+					"options": {
+						"raw": {
+							"language": "json"
+						}
+					}
+				},
+				"url": "https://localhost:7000/api/patient/update"
+			},
+			"response": []
+		},
+		{
+			"name": "get-by-id",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/get/c6c9203c-49cd-4777-e406-08dd245b1f40"
+			},
+			"response": []
+		},
+		{
+			"name": "get-all",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/get-all"
+			},
+			"response": []
+		},
+		{
+			"name": "delete",
+			"request": {
+				"method": "DELETE",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/delete/c6c9203c-49cd-4777-e406-08dd245b1f40"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (eq)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/eq1956"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (ne)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/ne1999"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (lt)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/lt1980-04-27"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (gt)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/gt2000-12-05T12:30:45"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (ge)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/ge2003-03-06T00"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (le)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/le2003-03-06"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (sa)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/sa1991-04"
+			},
+			"response": []
+		},
+		{
+			"name": "search-by-birthday (eb)",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"url": "https://localhost:7000/api/patient/search-by-birthday/eb1994-12-05"
+			},
+			"response": []
+		}
+	]
+}
